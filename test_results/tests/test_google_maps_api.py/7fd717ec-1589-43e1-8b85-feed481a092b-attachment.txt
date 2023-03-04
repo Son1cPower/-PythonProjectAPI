@@ -1,0 +1,45 @@
+
+Метод POST
+https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+{"status":"OK","place_id":"89262c69292342edf17aaec80d594ec1","scope":"APP","reference":"067886223728869ff0c07155522c6ed4067886223728869ff0c07155522c6ed4","id":"067886223728869ff0c07155522c6ed4"}
+Success!!! Status Code = 200
+All fileds are present in responce
+Responce with the same fileds like expected
+status has correct value
+scope has correct value
+Метод GET after POST
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=89262c69292342edf17aaec80d594ec1
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Success!!! Status Code = 200
+Responce with the same fileds like expected
+address has correct value
+Метод PUT
+https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+{"msg":"Address successfully updated"}
+Success!!! Status Code = 200
+Responce with the same fileds like expected
+msg has correct value
+Метод GET after PUT
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=89262c69292342edf17aaec80d594ec1
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"Kyiv Bylvarno-kydravskay 17B, UA","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Success!!! Status Code = 200
+Responce with the same fileds like expected
+address has correct value
+Метод DELETE
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+{"status":"OK"}
+Success!!! Status Code = 200
+Responce with the same fileds like expected
+status has correct value
+Метод GET after DELETE
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=89262c69292342edf17aaec80d594ec1
+{"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Success!!! Status Code = 404
+Responce with the same fileds like expected
+msg has Get operation failed, looks like place_id  doesn't exists in value
+Метод DELETE after DELETE
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+{"msg":"Delete operation failed, looks like the data doesn't exists"}
+Success!!! Status Code = 404
+Responce with the same fileds like expected
+msg has correct value
